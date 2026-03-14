@@ -1,17 +1,41 @@
-# wowllet
+# wowllet 👛
 
-A new Flutter project.
+AWS AmplifyとGoogle ML Kitを活用した、スマートな家計簿アプリです。
+レシートの画像から金額や店名を自動解析し、日々の収支を簡単に記録・分析することができます。
 
-## Getting Started
+## ✨ 主な機能
 
-This project is a starting point for a Flutter application.
+- **ダッシュボード (Home)**
+  - 今月の収支サマリーと円グラフによるカテゴリ別の支出割合の可視化。
+- **分析 (Analysis)**
+  - 月ごとの収支トレンドを棒グラフで比較。
+  - 特定のカテゴリの月別推移や詳細履歴へのドリルダウン分析。
+- **カレンダー (Calendar)**
+  - 日別の収支をカレンダー上で直感的に確認。
+- **スマート入力 (Smart Input)**
+  - **レシートOCR解析:** Google ML Kitを用いたテキスト認識により、レシート画像から合計金額と店名を自動抽出。
+  - 手入力での記録ももちろん可能。
+- **クラウド連携 (Cloud Backend)**
+  - AWS Amplifyを用いたバックエンド連携。
+  - 支出データのGraphQL API経由での保存と、レシート画像のS3ストレージへのアップロード。
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 技術スタック
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **Frontend:** Flutter, Dart
+- **Backend:** AWS Amplify Gen 2 (GraphQL API, Amazon S3)
+- **Machine Learning:** Google ML Kit (Text Recognition)
+- **UI/Charts:** fl_chart, table_calendar
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 セットアップ方法
+
+### 前提条件
+- Flutter SDK がインストールされていること
+- Node.js および npm がインストールされていること
+- AWS アカウントおよび IAM 権限の設定が完了していること
+
+### ローカルでの動かし方
+
+1. リポジトリをクローンします。
+   ```bash
+   git clone [https://github.com/Aiueo223/wowllet.git](https://github.com/Aiueo223/wowllet.git)
+   cd wowllet
